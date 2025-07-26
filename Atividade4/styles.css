@@ -1,0 +1,210 @@
+/* Reset simples */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis CSS */
+:root {
+  --cor-primaria: #222222;
+  --cor-secundaria: #555555;
+  --cor-fundo: #f9f9f9;
+  --cor-accento: #0077cc;
+  --cor-texto: #111111;
+  --font-principal: 'Roboto', sans-serif;
+  --transicao: 0.3s ease-in-out;
+}
+
+body {
+  font-family: var(--font-principal);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--cor-secundaria);
+}
+
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--cor-accento);
+  transition: transform var(--transicao);
+}
+
+.foto-perfil:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  margin-top: 15px;
+  font-size: 2.8rem;
+  color: var(--cor-primaria);
+}
+
+.slogan {
+  font-style: italic;
+  color: var(--cor-secundaria);
+  margin-bottom: 10px;
+}
+
+/* Menu */
+nav ul.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+nav ul.menu li a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color var(--transicao);
+}
+
+nav ul.menu li a:hover,
+nav ul.menu li a:focus {
+  background-color: var(--cor-accento);
+  color: white;
+}
+
+/* Main layout com Grid */
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+/* Seções */
+section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  margin-bottom: 15px;
+  color: var(--cor-accento);
+}
+
+section ul {
+  list-style: disc inside;
+}
+
+article {
+  margin-bottom: 20px;
+}
+
+article h3 {
+  color: var(--cor-primaria);
+  margin-bottom: 8px;
+}
+
+/* Aside - redes sociais */
+aside {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+aside h2 {
+  margin-bottom: 15px;
+  color: var(--cor-accento);
+}
+
+.redes-sociais {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.redes-sociais li a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transicao);
+}
+
+.redes-sociais li a:hover,
+.redes-sociais li a:focus {
+  color: var(--cor-accento);
+}
+
+/* Formulário */
+form label {
+  font-weight: 600;
+  color: var(--cor-secundaria);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0 12px 0;
+  border: 1px solid var(--cor-secundaria);
+  border-radius: 4px;
+  font-family: var(--font-principal);
+  font-size: 1rem;
+  transition: border-color var(--transicao);
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: var(--cor-accento);
+  outline: none;
+}
+
+form button {
+  background-color: var(--cor-accento);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color var(--transicao);
+}
+
+form button:hover,
+form button:focus {
+  background-color: #005999;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 2px solid var(--cor-secundaria);
+  color: var(--cor-secundaria);
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  
+  nav ul.menu {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

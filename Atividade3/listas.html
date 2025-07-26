@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Listas e Navegação - ManicaTech</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>ManicaTech</h1>
+    <p>Conteúdo técnico complementar sobre infraestrutura e inteligência artificial.</p>
+    <span class="menu-toggle" onclick="document.body.classList.toggle('menu-ativo')">&#9776;</span>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="listas.html">Listas</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Hobbies Profissionais</h2>
+      <ul>
+        <li>Desenvolver APIs com inteligência artificial</li>
+        <li>Configurar servidores em nuvem (AWS/GCP)</li>
+        <li>Automatizar processos com scripts Python</li>
+        <li>Montar e gerenciar ambientes de rede</li>
+        <li>Pesquisar sobre cibersegurança e observabilidade</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Passo a passo: Configurar um Agente Zabbix em um Servidor Linux</h2>
+      <ol>
+        <li>Atualize o sistema com <code>sudo apt update && sudo apt upgrade</code></li>
+        <li>Instale o agente: <code>sudo apt install zabbix-agent</code></li>
+        <li>Edite o arquivo de configuração: <code>/etc/zabbix/zabbix_agentd.conf</code></li>
+        <li>Configure o IP do servidor Zabbix na diretiva <code>Server=</code></li>
+        <li>Reinicie o agente: <code>sudo systemctl restart zabbix-agent</code></li>
+        <li>Habilite o serviço para iniciar com o sistema: <code>sudo systemctl enable zabbix-agent</code></li>
+        <li>No painel do Zabbix, adicione o host e vincule os templates</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Links Técnicos Úteis</h2>
+      <nav>
+        <a href="https://www.zabbix.com/documentation/current/manual/installation/install" target="_blank">Documentação Zabbix</a><br />
+        <a href="https://cloud.google.com/" target="_blank">Google Cloud Platform</a><br />
+        <a href="https://docs.aws.amazon.com/" target="_blank">Amazon Web Services</a>
+      </nav>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ManicaTech - Felipe Manica. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
